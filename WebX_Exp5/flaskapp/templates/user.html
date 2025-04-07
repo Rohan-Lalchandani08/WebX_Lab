@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card text-center mx-auto mt-5" style="max-width: 600px;">
+    <div class="card-body">
+        <h2 class="card-title">Hello, {{ username }} 👋</h2>
+
+        {% if username.lower() == 'rohan lalchandani' %}
+            <p class="card-text text-success fw-bold">Welcome back, Rohan! 🎉</p>
+        {% elif username.lower() == 'guest' %}
+            <p class="card-text">You're browsing as a guest. Feel free to explore!</p>
+        {% else %}
+            <p class="card-text">Welcome to your profile page.</p>
+        {% endif %}
+
+        <a href="{{ url_for('home') }}" class="btn btn-outline-primary mt-3">⬅ Back to Home</a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="text-center mt-5">
+    <h1 class="display-4 mb-3">Welcome to the Flask App 🌐</h1>
+    <p class="lead mb-5">Choose how you'd like to continue:</p>
+
+    <div class="d-flex justify-content-center gap-4">
+        <a href="{{ url_for('user_profile', username='Guest') }}" class="btn btn-lg btn-outline-secondary">
+            👤 Continue as Guest
+        </a>
+        <a href="{{ url_for('user_profile', username='Rohan Lalchandani') }}" class="btn btn-lg btn-primary">
+            🙋‍♂️ Continue as Rohan Lalchandani
+        </a>
+    </div>
+</div>
+{% endblock %}
