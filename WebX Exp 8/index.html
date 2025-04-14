@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bookApp">
+  <head>
+    <meta charset="UTF-8">
+    <title>AngularJS App</title>
+  
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  
+    <!-- jQuery + Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+  
+    <!-- App Scripts -->
+    <script src="app.js"></script>
+    <script src="controllers/MainController.js"></script>
+    <script src="controllers/LoginController.js"></script>
+    <script src="controllers/BookController.js"></script>
+    <script src="services/AuthService.js"></script>
+    <script src="filters/bookFilter.js"></script>
+  </head>
+  
+<body>
+
+  <nav class="navbar navbar-dark bg-dark px-4">
+    <div class="d-flex align-items-center">
+      <a class="navbar-brand mb-0" href="#!/">📚 BookApp</a>
+      <ul class="navbar-nav d-flex flex-row mb-0 ml-3">
+        <li class="nav-item mx-2">
+          <a class="nav-link text-white" href="#!/">Home</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link text-white" href="#!/login">Login</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link text-white" href="#!/library">Library</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  
+
+  
+
+<div class="container mt-4">
+  <div ng-view></div>
+</div>
+
+</body>
+</html>

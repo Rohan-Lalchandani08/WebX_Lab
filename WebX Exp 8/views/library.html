@@ -1,0 +1,7 @@
+<h2>Library</h2>
+<input type="text" class="form-control mb-3" ng-model="searchQuery" placeholder="Search by title, author or genre...">
+<ul class="list-group">
+  <li class="list-group-item" ng-repeat="book in books | bookFilter:searchQuery">
+    <strong>{{ book.title }}</strong> by {{ book.author }} <em>({{ book.genre }})</em>
+  </li>
+</ul>
